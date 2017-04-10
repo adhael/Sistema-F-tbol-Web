@@ -42,7 +42,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Seguimiento.findByIdSeguimiento", query = "SELECT s FROM Seguimiento s WHERE s.idSeguimiento = :idSeguimiento"),
     @NamedQuery(name = "Seguimiento.findByFechaSeguimiento", query = "SELECT s FROM Seguimiento s WHERE s.fechaSeguimiento = :fechaSeguimiento"),
     @NamedQuery(name = "Seguimiento.findByResultadoSeguimiento", query = "SELECT s FROM Seguimiento s WHERE s.resultadoSeguimiento = :resultadoSeguimiento")})
-public class Seguimiento implements Serializable {
+public class Seguimiento implements Serializable, IDTO {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -176,7 +176,12 @@ public class Seguimiento implements Serializable {
 
     @Override
     public String toString() {
-        return "com.futbolweb.backend.entities.Seguimiento[ idSeguimiento=" + idSeguimiento + " ]";
+        return idSeguimiento.toString();
+    }
+
+    @Override
+    public String obtenerLlavePrimaria() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
