@@ -133,32 +133,7 @@
 
 
 
-        <f:view>
-
-
-            <h:form>
-                <h1><h:outputText value="Create/Edit"/></h1>
-                <h:panelGrid columns="2">
-                    <h:outputLabel value="MotivoPago:" for="motivoPago" />
-                    <h:inputText id="motivoPago" value="#{registroPagoManagedBean.pago.motivoPago}" title="MotivoPago" required="true" requiredMessage="The MotivoPago field is required."/>
-                    <h:outputLabel value="FechaPago:" for="fechaPago" />
-                    <h:inputText id="fechaPago" value="#{registroPagoManagedBean.pago.fechaPago}" title="FechaPago" required="true" requiredMessage="The FechaPago field is required.">
-                        <f:convertDateTime pattern="MM/dd/yyyy" />
-                    </h:inputText>
-                    <h:outputLabel value="Monto:" for="monto" />
-                    <h:inputText id="monto" value="#{registroPagoManagedBean.pago.monto}" title="Monto" required="true" requiredMessage="The Monto field is required."/>
-                    <h:outputLabel value="Estado:" for="estado" />
-                    <h:inputText id="estado" value="#{registroPagoManagedBean.pago.estado}" title="Estado" required="true" requiredMessage="The Estado field is required."/>
-                    <h:outputLabel value="FkIdJugador:" for="fkIdJugador" />
-                    <h:selectOneMenu id="fkIdJugador" value="#{registroPagoManagedBean.pago.fkIdJugador}" title="FkIdJugador" required="true" requiredMessage="The FkIdJugador field is required.">
-                        <!-- TODO: update below reference to list of available items-->
-                        <f:selectItems value="#{jugadorManagedBean.listarJugadores()}" var="jugador" itemLabel="#{jugador.idJugador}"/>
-                    </h:selectOneMenu>
-                </h:panelGrid>
-                <h:commandButton value="Registrar" action="#{registroPagoManagedBean.registrarPago()}"/>
-            </h:form>
-        </f:view>
-
+       
     
 
 
